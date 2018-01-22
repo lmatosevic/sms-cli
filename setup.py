@@ -15,7 +15,7 @@ setup(name="sms-core",
       install_requires=["pyserial", "argparse"],
       entry_points={
           'console_scripts': [
-              'sms-core = main:main'
+              'sms-core = core.main:main'
           ]
       },
       description="SMS core command line tool",
