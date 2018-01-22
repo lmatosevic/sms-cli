@@ -17,6 +17,6 @@ class Send:
 
     @staticmethod
     def write(ser, data):
-        ser.write(data)
+        ser.write(data.encode())
         ser.flush()
         sleep(0.1)
