@@ -31,8 +31,9 @@ def main():
         ser.open()
         command = create_command(args)
         command.execute(ser)
-    except serial.SerialException:
+    except serial.SerialException as e:
         print("Unable to open port " + str(args.com))
+        print(e)
     finally:
         if ser is not None:
             ser.close()

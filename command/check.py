@@ -11,4 +11,4 @@ class Check:
             ser.flush()
             sleep(1)
             response = ser.read_all()
-            print(str(i) + "/" + str(self.times) + "request: AT -> response: " + response + "\n")
+            print(str(i) + "/" + str(self.times) + "request: AT -> response: " + response)

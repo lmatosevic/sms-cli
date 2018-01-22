@@ -13,6 +13,7 @@ class Send:
         self.write(ser, chr(26))
         self.write(ser, "")
         sleep(2.9)
+        print("Message sent!")
 
     @staticmethod
     def write(ser, data):
