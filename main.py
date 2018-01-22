@@ -27,8 +27,8 @@ def main():
     ser = None
 
     try:
-        # ser = serial.Serial(args.com, args.baud, timeout=1)
-        # ser.open()
+        ser = serial.Serial(args.com, args.baud, timeout=1)
+        ser.open()
         command = create_command(args)
         command.execute(ser)
     except serial.SerialException:
