@@ -2,13 +2,13 @@ from time import sleep
 
 
 class Check:
-    def __init__(self, times):
-        self.times = times
+    def __init__(self, iterations):
+        self.iterations = iterations
 
     def execute(self, ser):
-        for i in range(self.times):
+        print("Checking started...")
+        for i in range(self.iterations):
             ser.write("AT\r".encode("ascii"))
-            ser.flush()
-            sleep(5)
-            response = ser.read(2)
-            print(str(i + 1) + "/" + str(self.times) + " AT -> " + response.decode("ascii"))
+            sleep(4)
+            response = ser.read(100).decode("ascii")
+            print(str(i + 1) + "/" + str(self.iterations) + " AT -> " + response)

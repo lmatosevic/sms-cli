@@ -21,7 +21,7 @@ def main():
                              required=True)
 
     check_parser = sub_parser.add_parser('check', help="check connectivity with GSM shield module")
-    check_parser.add_argument("-t", "--times", help="how many times to check connection", required=False, default=4)
+    check_parser.add_argument("-i", "--iter", help="how many iterations to check connection", required=False, default=4)
     args = parser.parse_args()
 
     ser = None
@@ -40,8 +40,8 @@ def main():
 
 
 def create_command(args):
-    if hasattr(args, 'times'):
-        return Check(args.times)
+    if hasattr(args, 'iter'):
+        return Check(args.iter)
     else:
         return Send(args.dest, args.message)
 
