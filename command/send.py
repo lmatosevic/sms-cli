@@ -21,5 +21,5 @@ class Send:
     @staticmethod
     def write(ser, data):
         ser.write(data.encode("ascii"))
-        sleep(0.5)
+        sleep(0.1)
         _ = ser.readline()
