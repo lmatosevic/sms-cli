@@ -2,21 +2,22 @@ from setuptools import setup
 from setuptools import find_packages
 
 desc = """\
-SMS core
+SMS-cli
 ==============
 
-Command line tool for sending AT (ATtention) commands via serial port to GSM shield module.
+Command line interface for sending AT (ATtention) commands via serial port to GSM shield module.
 """
 
-setup(name="sms-core",
+setup(name="sms-cli",
       version="1.0.0",
       author="luka",
+      author_email="lukamatosevic5@gmail.com",
       packages=find_packages(),
       install_requires=["pyserial", "argparse"],
       entry_points={
           'console_scripts': [
-              'sms-core = core.main:main'
+              'sms-cli = cli.main:main'
           ]
       },
-      description="SMS core command line tool",
+      description="SMS command line interface tool",
       long_description=desc)
