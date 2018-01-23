@@ -12,11 +12,11 @@ class Send:
         self.write(ser, self.message)
         self.write(ser, chr(26))
         self.write(ser, "\r")
-        sleep(2.9)
+        sleep(5)
         print("Message sent!")
 
     @staticmethod
     def write(ser, data):
-        ser.write(data.encode())
+        ser.write(data.encode("ascii"))
         ser.flush()
-        sleep(0.1)
+        sleep(0.5)
