@@ -11,7 +11,7 @@ class Send:
         self.write(ser, "AT + CMGS = \"" + str(self.destination) + "\"")
         self.write(ser, self.message)
         self.write(ser, chr(26))
-        self.write(ser, "")
+        self.write(ser, "\r")
         sleep(2.9)
         print("Message sent!")
 

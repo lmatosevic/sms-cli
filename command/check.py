@@ -7,7 +7,7 @@ class Check:
 
     def execute(self, ser):
         for i in range(self.times):
-            ser.write("AT".encode())
+            ser.write("AT\r".encode())
             ser.flush()
             sleep(2)
             response = ser.read(2)
