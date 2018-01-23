@@ -3,7 +3,7 @@ from time import sleep
 
 class Check:
     def __init__(self, number):
-        self.number = number
+        self.number = int(number)
 
     def execute(self, ser):
         print("Checking started...")
