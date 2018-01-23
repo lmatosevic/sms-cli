@@ -9,6 +9,6 @@ class Check:
         for i in range(self.times):
             ser.write("AT".encode())
             ser.flush()
-            sleep(1)
-            response = ser.read_all()
+            sleep(2)
+            response = ser.read(2)
             print(str(i + 1) + "/" + str(self.times) + " AT -> " + response.decode())
