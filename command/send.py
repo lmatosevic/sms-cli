@@ -8,18 +8,12 @@ class Send:
         if not self.destination.startswith("+"):
             self.destination = "+" + self.destination
 
-    def execute(self, ser):
-        print("Sending started...")
-        self.write(ser, "AT + CMGF = 1\r")
-        self.write(ser, "AT + CMGS = \"" + self.destination + "\"\r")
-        self.write(ser, self.message + "\r")
-        self.write(ser, chr(26))
-        self.write(ser, "\r")
+    def execute(self, serial_stream):
+        print("Sending message...")
+        serial_stream.write("AT + CMGF = 1\r")
+        serial_stream.write("AT + CMGS = \"" + self.destination + "\"\r")
+        serial_stream.write(self.message + "\r")
+        serial_stream.write(chr(26))
+        serial_stream.write("\r")
         sleep(3)
-        print("Message sent!")
-
-    @staticmethod
-    def write(ser, data):
-        ser.write(data.encode("ascii"))
-        sleep(0.1)
-        _ = ser.readline()
+        print("Message sent")
