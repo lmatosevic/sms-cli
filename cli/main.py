@@ -14,7 +14,7 @@ def main():
                                      description="execute AT commands on GSM shield module via serial port")
     parser.add_argument("-v", "--version", help="print version number", action='version', version='%(prog)s 1.0.0')
     parser.add_argument("-b", "--baud", help="specify baud rate", required=False, default=19200)
-    parser.add_argument("-c", "--com", help="specify communication device", required=False, default="/dev/ttyAMA0")
+    parser.add_argument("-p", "--port", help="specify port device type", required=False, default="/dev/ttyAMA0")
     sub_parser = parser.add_subparsers()
 
     send_parser = sub_parser.add_parser('send', help='send SMS message to destination')
@@ -53,11 +53,11 @@ def main():
     serial_stream = None
 
     try:
-        serial_stream = SerialStream(args.com, args.baud)
+        serial_stream = SerialStream(args.port, args.baud)
         command = create_command(args)
         command.execute(serial_stream)
     except serial.SerialException as e:
-        print("Unable to open serial port: " + str(args.com))
+        print("Unable to open serial port: " + str(args.port))
         print(e)
     finally:
         if serial_stream is not None:
