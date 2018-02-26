@@ -22,7 +22,7 @@ class Read:
         response_lines = serial_stream.readlines()
         for line in response_lines:
             print(line)
-        print("Message/s red")
+        print("Message/s read")
 
     def show_code(self):
         if self.full:
