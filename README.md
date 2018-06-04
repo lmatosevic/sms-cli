@@ -18,7 +18,7 @@ pip3 install dist/sms-cli-{version}.tar.gz
 After installation, tool will be added to system path and can be used to send messages and read inbox.
 
 ## Usage
-* General description of all commands:
+### General description of all commands
 ```sh
 usage: sms-cli [-h] [-v] [-b BAUD] [-p PORT] {send,read,delete,check} ...
 
@@ -39,7 +39,7 @@ optional arguments:
   -p PORT, --port PORT  specify port device type
 ```
 
-* Usage for command `check`:
+### Usage for command `check`
 ```sh
 usage: sms-cli check [-h] [-n NUMBER]
 
@@ -49,7 +49,7 @@ optional arguments:
                         number of iterations to check connection
 ```
 
-* Usage for command `send`:
+### Usage for command `send`
 ```sh
 usage: sms-cli send [-h] -d DESTINATION -m MESSAGE
 
@@ -62,7 +62,7 @@ optional arguments:
                         "Some message text.")
 ```
 
-* Usage for command `read`:
+### Usage for command `read`
 ```sh
 usage: sms-cli read [-h] [-i INDEX] [-s STORAGE] [-u] [-d] [-f]
 
@@ -80,7 +80,7 @@ optional arguments:
   -f, --full            show full header information of red SMS messages
 ```
 
-* Usage for command `delete`:
+### Usage for command `delete`
 ```sh
 usage: sms-cli delete [-h] -i INDEX [-s STORAGE]
 
