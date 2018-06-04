@@ -12,6 +12,14 @@ proper SIM card inserted with enough credits to send SMS messages.
 Tool can be installed using `pip3` command:
 
 ```sh
+pip3 install sms-cli
+```
+
+Or you can install it directly form this project source:
+
+```sh
+python3 build.py
+
 pip3 install dist/sms-cli-{version}.tar.gz
 ```
 
