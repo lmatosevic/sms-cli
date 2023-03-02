@@ -16,6 +16,7 @@ setup(name="sms-cli",
       download_url='https://github.com/lmatosevic/sms-cli/archive/1.0.tar.gz',
       packages=find_packages(),
       install_requires=["pyserial", "argparse"],
+      python_requires='>=3.6',
       entry_points={
           'console_scripts': [
               'sms-cli = cli.main:main'
