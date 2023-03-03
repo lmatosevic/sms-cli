@@ -112,4 +112,4 @@ optional arguments:
 
 ## LICENSE
 
-[GNU General Public License](LICENSE)
+[GNU General Public License](LICENSE.md)

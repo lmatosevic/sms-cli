@@ -3,7 +3,7 @@ from setuptools import find_packages
 
 desc = "Command line interface for sending AT (ATtention) commands via serial port to GSM shield module."
 
-version = "1.0.2"
+version = "1.0.3"
 
 setup(name="sms-cli",
       version=version,
