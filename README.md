@@ -1,14 +1,17 @@
 # SMS-cli
-> Command line tool for sending commands via serial port to GSM shield module.
+
+> Command line tool for sending commands via serial port to GSM shield module
 
 ## Description
-Command line tool for sending AT (ATtention) commands via serial port to 
-[GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield). This tool is written in `python3` and it is 
-supported on any platform (Windows/Linux/MacOS). Before using tool you must have 
-[GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield) connected to serial port and it must have 
+
+Command line tool for sending AT (ATtention) commands via serial port to
+[GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield). This tool is written in `python3` and it is
+supported on any platform (Windows/Linux/MacOS). Before using tool you must have
+[GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield) connected to serial port, and it must have
 proper SIM card inserted with enough credits to send SMS messages.
 
 ## Installation
+
 Tool can be installed using `pip3` command:
 
 ```sh
@@ -26,7 +29,9 @@ pip3 install dist/sms-cli-{version}.tar.gz
 After installation, tool will be added to system path and can be used to send messages and read inbox.
 
 ## Usage
+
 ### All commands
+
 ```sh
 usage: sms-cli [-h] [-v] [-b BAUD] [-p PORT] {send,read,delete,check} ...
 
@@ -48,6 +53,7 @@ optional arguments:
 ```
 
 ### Check
+
 ```sh
 usage: sms-cli check [-h] [-n NUMBER]
 
@@ -58,6 +64,7 @@ optional arguments:
 ```
 
 ### Send
+
 ```sh
 usage: sms-cli send [-h] -d DESTINATION -m MESSAGE
 
@@ -71,6 +78,7 @@ optional arguments:
 ```
 
 ### Read
+
 ```sh
 usage: sms-cli read [-h] [-i INDEX] [-s STORAGE] [-u] [-d] [-f]
 
@@ -89,6 +97,7 @@ optional arguments:
 ```
 
 ### Delete
+
 ```sh
 usage: sms-cli delete [-h] -i INDEX [-s STORAGE]
 
@@ -101,6 +110,6 @@ optional arguments:
                         options: [SM | ME | MT | BM | SR]
 ```
 
-LICENSE
----
-GNU General Public License
+## LICENSE
+
+[GNU General Public License](LICENSE)
