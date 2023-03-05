@@ -1,9 +1,10 @@
 from setuptools import setup
 from setuptools import find_packages
 
-desc = "Command line interface for sending AT (ATtention) commands via serial port to GSM shield module."
+desc = "Command-line interface for sending AT (ATtention) commands via serial port to GSM shield module."
 
-version = "1.0.3"
+verstrline = open('./cli/__init__.py', "rt").readline()
+version = verstrline.split('=')[-1].strip().replace('\'', '')
 
 setup(name="sms-cli",
       version=version,

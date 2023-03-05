@@ -8,11 +8,14 @@ from command.read import Read
 from command.send import Send
 from command.util.serial_stream import SerialStream
 
+from cli import __version__
+
 
 def main():
     parser = argparse.ArgumentParser(prog='sms-cli',
                                      description="execute AT commands on GSM shield module via serial port")
-    parser.add_argument("-v", "--version", help="print version number", action='version', version='%(prog)s 1.0.0')
+    parser.add_argument("-v", "--version", help="print version number", action='version',
+                        version=f'%(prog)s {__version__}')
     parser.add_argument("-b", "--baud", help="specify baud rate", required=False, default=19200)
     parser.add_argument("-p", "--port", help="specify port device type", required=False, default="/dev/ttyAMA0")
     sub_parser = parser.add_subparsers()

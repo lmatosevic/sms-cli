@@ -1,10 +1,10 @@
 # SMS-cli
 
-> Command line tool for sending commands via serial port to GSM shield module
+> Command-line tool for sending commands via serial port to GSM shield module
 
 ## Description
 
-Command line tool for sending AT (ATtention) commands via serial port to
+Command-line tool for sending AT (ATtention) commands via serial port to
 [GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield). This tool is written in `python3` and it is
 supported on any platform (Windows/Linux/MacOS). Before using tool you must have
 [GSM Shield module](https://www.arduino.cc/en/Guide/ArduinoGSMShield) connected to serial port, and it must have
